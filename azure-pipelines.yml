@@ -17,6 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: CmdLine@2
+  inputs:
+    script: 'ls'
 - task: DockerInstaller@0
   inputs:
     dockerVersion: '17.09.0-ce'
