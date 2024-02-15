@@ -23,10 +23,11 @@ steps:
 - task: DockerInstaller@0
   inputs:
     dockerVersion: '17.09.0-ce'
+
 - task: DockerCompose@0
   inputs:
     containerregistrytype: 'Azure Container Registry'
     azureSubscription: 'azure one(bcc2cb11-328c-4daa-a5d0-fe44d1a55bff)'
     azureContainerRegistry: '{"loginServer":"arek31012024.azurecr.io", "id" : "/subscriptions/bcc2cb11-328c-4daa-a5d0-fe44d1a55bff/resourceGroups/containerApp/providers/Microsoft.ContainerRegistry/registries/arek31012024"}'
-    dockerComposeFile: '**/docker-compose.yml'
+    dockerComposeFile: 'docker-compose.yml'
     action: 'Run services'
