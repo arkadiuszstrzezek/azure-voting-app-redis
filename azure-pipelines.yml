@@ -33,6 +33,6 @@ steps:
     sudo apt-get install -y docker-compose
 
     # Buduje i wdraża kontenery za pomocą docker-compose
-    docker-compose -f $(System.DefaultWorkingDirectory)/**/*.yml build
-    docker-compose -f $(System.DefaultWorkingDirectory)/**/*.yml push
+    docker-compose -f $(System.DefaultWorkingDirectory)/.yml build
+    docker-compose -f $(System.DefaultWorkingDirectory)/*.yml push
   displayName: 'Build and push Docker containers'
